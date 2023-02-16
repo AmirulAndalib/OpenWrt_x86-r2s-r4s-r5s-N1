@@ -28,4 +28,10 @@ sed -i "/gl_feed_mtk/d" feeds.conf
 sed -i "/gl_feed_common/d" feeds.conf
 sed -i "/gl_feed_21_02/d" feeds.conf
 
+echo "
+CONFIG_FEED_gl_feed_mtk=n
+CONFIG_FEED_gl_feed_common=n
+CONFIG_FEED_gl_feed_21_02=n
+" >> devices/common/.config
+
 
