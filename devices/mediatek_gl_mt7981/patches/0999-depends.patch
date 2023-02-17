@@ -29,6 +29,20 @@
    IMAGE_SIZE := 65536k
    KERNEL_IN_UBI := 1
    IMAGES := factory.img sysupgrade.tar
+@@ -197,5 +197,5 @@
+   DEVICE_DTS_DIR := $(DTS_DIR)/mediatek
+   SUPPORTED_DEVICES := glinet,x3000-emmc
+-  DEVICE_PACKAGES := kmod-hwmon-pwmfan mkf2fs kmod-mmc kmod-fs-f2fs gdisk
++  DEVICE_PACKAGES := kmod-hwmon-pwmfan mkf2fs kmod-mmc kmod-fs-f2fs gdisk mmc-utils losetup blockdev gl-sdk4-mtk-wifi-v2 kmod-conninfra-mt7981-ko kmod-mt-wifi-mt7981-ko kmod-warp-mt7981-ko kmod-gl-sdk4-fan kmod-shortcut-fe kmod-shortcut-fe-cm 8021xd
+   IMAGE/sysupgrade.bin := sysupgrade-tar | append-gl-metadata
+ endef
+@@ -208,5 +208,5 @@
+   DEVICE_DTS_DIR := $(DTS_DIR)/mediatek
+   SUPPORTED_DEVICES := glinet,xe3000-emmc
+-  DEVICE_PACKAGES := kmod-hwmon-pwmfan mkf2fs kmod-mmc kmod-fs-f2fs gdisk
++  DEVICE_PACKAGES := kmod-hwmon-pwmfan mkf2fs kmod-mmc kmod-fs-f2fs gdisk mmc-utils losetup blockdev gl-sdk4-mtk-wifi-v2 kmod-conninfra-mt7981-ko kmod-mt-wifi-mt7981-ko kmod-warp-mt7981-ko kmod-gl-sdk4-fan kmod-shortcut-fe kmod-shortcut-fe-cm 8021xd
+   IMAGE/sysupgrade.bin := sysupgrade-tar | append-gl-metadata
+ endef
 @@ -215,10 +215,10 @@
  define Device/glinet_gl-mt2500
    DEVICE_VENDOR := GL.iNet
